@@ -22,6 +22,16 @@ class SmurfContainer extends Component {
             value={this.state.name}
             onChange={this.handleChanges}
           />
+          <input
+            name="age"
+            value={this.state.age}
+            onChange={this.handleChanges}
+          />
+          <input
+            name="height"
+            value={this.state.height}
+            onChange={this.handleChanges}
+          />
           <button>Add Smurf</button>
         </form>
       </div>
@@ -42,9 +52,9 @@ class SmurfContainer extends Component {
   addSmurf = e => {
     e.preventDefault();
     const newSmurf = {
-      name: this.state.name
-      //   age: this.state.age,
-      //   height: this.state.height
+      name: this.state.name,
+      age: this.state.age,
+      height: this.state.height
     };
     this.props.addSmurf(newSmurf);
   };

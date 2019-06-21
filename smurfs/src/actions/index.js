@@ -38,6 +38,7 @@ export const getSmurfs = () => dispatch => {
 
 export const addSmurf = newSmurf => dispatch => {
   dispatch({ type: FETCH_SMURFS_START });
+  console.log(newSmurf);
   axios
     .post("http://localhost:3333/smurfs", newSmurf)
     .then(res => {

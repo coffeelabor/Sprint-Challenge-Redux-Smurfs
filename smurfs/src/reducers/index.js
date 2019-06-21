@@ -42,6 +42,7 @@ export const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         fetchingSmurfs: false,
+        error: "",
         smurfs: action.payload
       };
     case FETCH_SMURFS_FAILURE:
@@ -66,6 +67,10 @@ export const rootReducer = (state = initialState, action) => {
         ...state,
         error: action.payload
       };
+    // case NEW_CASE:
+    //   return Object.assign({}, state, {
+    //     smurfs: action.payload
+    //   })
     default:
       return state;
   }
